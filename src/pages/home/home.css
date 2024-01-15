@@ -1,0 +1,140 @@
+.home {
+    grid-template-columns: 4.32fr 7.68fr;
+    align-items: center;
+    background-color: white;
+    padding: 25px;
+    height: 100vh;
+    padding-left: 45px;
+    max-height: 100vh;
+    overflow: hidden
+}
+
+.home__img {
+    height: 90%;
+    object-fit: contain;
+    border-radius: 30px;
+    box-shadow: 0 0 8px hsla(0, 0%, 0%, 0.3);
+    z-index: 1;
+}
+
+.home__data {
+    max-width: 600px;
+    margin-inline: auto;
+    padding-top: 20px;
+}
+
+.home__title {
+    position: relative;
+    font-size: 30px;
+    line-height: 1.24;
+    padding-left: 50px;
+
+}
+
+.home__title::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 40%;
+    width: 40px;
+    height: 5px;
+    border-radius: 1opx;
+    background-color: red;
+
+}
+
+.home__description {
+    line-height: 2.125;
+    margin-block: 16px 32px;
+    width: 78%;
+
+}
+
+
+.typography-container {
+    display: flex;
+    align-items: center;
+
+}
+
+.home__title {
+    font-size: 2rem;
+    white-space: nowrap;
+}
+
+.wave-text {
+    display: inline-block;
+    animation: wave 2s infinite;
+}
+
+.wave-text span {
+    animation: none;
+}
+
+@keyframes wave {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    25%,
+    75% {
+        transform: translateY(-10px);
+    }
+
+    50% {
+        transform: translateY(0);
+    }
+}
+
+.color__block {
+    position: fixed;
+    height: 200%;
+    width: 100%;
+    background-color: blueviolet;
+    top: -50%;
+    left: -83%;
+    transform: rotate(-15deg);
+}
+
+
+@media only screen and (min-width: 1024px) and (max-width: 1633px) {
+    .home__img {
+        /* background: red; */
+        /* height:60% ; */
+    }
+
+    .home__title {
+        font-size: 1.5rem;
+        white-space: nowrap;
+    }
+
+}
+
+@media only screen and (min-width: 1024px) {
+
+    .home__title {
+        font-size: 1rem;
+        white-space: nowrap;
+    }
+
+}
+
+@media only screen and (width: 1440px) {
+    .home__title {
+        font-size: 2rem;
+        white-space: nowrap;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .menu-open .color__block {
+        display: none;
+    }
+
+    .home__title.wave-text {
+        display: none;
+    }
+
+}
