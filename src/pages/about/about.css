@@ -1,0 +1,125 @@
+.section__title {
+    text-align: center !important;
+    font-size: 40px;
+}
+
+.section {
+    max-height: 100vh;
+    overflow: hidden;
+}
+
+.info__item {
+    margin: 18px;
+    /* background-color: brown; */
+}
+
+.button {
+    display: inline-block;
+    color: blueviolet;
+    border: 1px solid red;
+    padding: 15px 70px 15px 35px;
+    border-radius: 35px;
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+
+}
+
+
+.button__icon {
+    background-color: blueviolet;
+    position: absolute;
+    inset-block: -2px;
+    right: 0px;
+    width: 55px;
+    border-radius: 50px;
+    color: white;
+    text-align: center;
+    line-height: 60px;
+}
+
+.button::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: blueviolet;
+    z-index: -1;
+    transition: all 0.3s ease-in-out;
+    transform: translateX(100%);
+}
+
+.button:hover::before {
+    transform: translateX(0%);
+    z-index: -2;
+    color: black;
+}
+
+.button:hover {
+    color: white;
+}
+
+.about__container,
+.about__info,
+.info__list,
+.info__item {
+    grid-template-columns: 5fr 1fr;
+}
+
+.info__list {
+    row-gap: 25px;
+    margin-bottom: 32px;
+}
+
+.info__list:hover {}
+
+.section__subtitle {
+    font-size: larger;
+    margin-bottom: 20px;
+}
+
+.info__list.info__item,
+.info__list.info.description {
+    font-size: medium;
+    font-weight: 600;
+}
+
+.stats__box {
+    display: flex;
+    border: 1px solid gray;
+    box-shadow: 10px 4px 4px 8px rgba(0, 0, 0, 0.3);
+    padding: 30px 150px 35px 30px;
+    position: relative;
+}
+
+.Status__wrapper {
+    display: grid;
+    grid-template-columns: 9fr 1fr;
+
+}
+
+/* .stats__box:hover{
+    background-color: blueviolet;
+    color: #fff;
+    transform: scale(1.1);
+    z-index: 9;
+} */
+
+
+
+.stats__box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, blueviolet, #3498db);
+    z-index: -1;
+    transition: transform 0.3s ease-out;
+    transform-origin: 50% 10% 20% 10%;
+    transform: scaleY(0);
+}
+
+.stats__box:hover::before {
+    transform: scaleX(1);
+}
