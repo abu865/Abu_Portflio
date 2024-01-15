@@ -20,7 +20,7 @@ const Home = () => {
           with a keen eye for crafting engaging and user-friendly web
           experiences. My journey into the world of web development began{" "}
           <span style={{ color: "red" }}>1.3 years</span> when I discovered the
-          power of turning code into captivating visuals.
+          power of turning code into captivating visuals .
         </p>
       </div>
 
